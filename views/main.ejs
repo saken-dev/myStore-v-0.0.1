@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Главная страница</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/add-product">Добавить продукт</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class = "main_container_div">
+        <% if (prods.length > 0){ %>
+            <% for(let product of prods){ %>
+                <div class="product_container">
+                    <h3>Имя книги</h3>
+                    <h4><%= product.title %></h4>
+                </div>
+         <% } } else { %>
+        <h1>Продукты еще не добавлены</h1>
+        <h2>Ожидайте...</h2>
+         <% } %>
+        </div>
+    </main>
+</body>
+</html>
